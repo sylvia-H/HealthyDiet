@@ -1,0 +1,17 @@
+#loginModal {
+  .modal-content {
+    background-color: $cream1;
+    // border: .75rem solid $cream1;
+    // border-radius: 0;
+    // background: url('https://storage.googleapis.com/vue-course-api.appspot.com/sylviah/1649314490306.jpg?GoogleAccessId=firebase-adminsdk-zzty7%40vue-course-api.iam.gserviceaccount.com&Expires=1742169600&Signature=b0rZ72HhEeHGNcwufxFtvcziZfL715hmYYTF4uuunWjG5V1BXJxkov%2B9%2FI6dmkLxXHvz8E4qWUQYJrBlQG%2BcBMhpqei6TTZUDugdw%2FQhkiIlQP%2BsI%2BsfXtLqGHIKb%2FmEdQ9HhJDHa2kqH9gRzFGYQHHzW9EcqGdGKc0mP8lPl4eYbsrOe8NGfM4PI8WyerHcGOARQmVeB6XEJwQBKHEW90s%2BkFKakR%2FzYdTvvaO%2FrH8DQUfJkdau3kqT5yafY4FCayHaDudvKa2rLKg6bqDA91uq3QObJp7oTo83d99kC2mtV8Lrr7pJT1Zk%2BmJHa1v6%2FP%2BOTxpL%2FxLOh9ZqsgI9Dw%3D%3D') no-repeat center / cover;
+    .modal-body {
+      background-color: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(8px);
+      input {
+        background-color: rgba(255, 255, 255, 0);
+        border: 0;
+        border-bottom: 1px solid $brown1;
+      }
+    }
+  }
+}
