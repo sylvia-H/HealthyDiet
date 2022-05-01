@@ -199,10 +199,12 @@
       </div>
     </div>
   </section>
+  <FrontFooter />
 </template>
 
 <script>
 import FrontNavbar from '@/components/frontend/FrontNavbar.vue';
+import FrontFooter from '@/components/frontend/FrontFooter.vue';
 import TextFrame from '@/components/frontend/FrontTextFrame.vue';
 import VueLoader from '@/components/LoadingOverlay2.vue';
 
@@ -211,6 +213,7 @@ export default {
     VueLoader,
     TextFrame,
     FrontNavbar,
+    FrontFooter,
   },
   data() {
     return {
