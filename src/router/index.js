@@ -10,14 +10,14 @@ const routes = [
     path: '/',
     name: 'homeView',
     component: () => import('../views/frontend/IndexView.vue'),
+    meta: {
+      title: '好食遞 HEALTHY DIET - 您的優質餐飲管家',
+    },
   },
   {
     path: '/',
     name: 'home',
     component: () => import('../views/frontend/HomeView.vue'),
-    meta: {
-      title: '好食遞 HEALTHY DIET - 您的優質餐飲管家',
-    },
     children: [
       {
         path: 'products',
