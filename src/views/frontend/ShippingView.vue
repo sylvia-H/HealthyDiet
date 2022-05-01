@@ -1,5 +1,5 @@
 <template>
-  <!-- 送貨須知 -->
+  <!-- 選購流程 -->
   <section class="container | pt-20" style="min-height: 90vh">
     <h2 class="text-center">如何好遞</h2>
     <hr class="my-8" />
@@ -54,6 +54,7 @@
       </div>
     </div>
   </section>
+  <!-- 出貨流程 -->
   <section class="container">
     <div class="row">
       <div class="col-12 col-md-10 offset-md-1 | mb-8">
@@ -118,7 +119,8 @@
       </div>
     </div>
   </section>
-  <section class="container | mb-20">
+  <!-- 退換貨須知 -->
+  <section class="container">
     <div class="row">
       <div class="col-12 col-md-10 offset-md-1">
         <hr class="my-12" />
@@ -252,6 +254,38 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+  <!-- 聯絡我們 -->
+  <section class="container | mb-20">
+    <div class="row">
+      <div class="col-12 col-md-10 offset-md-1">
+        <hr class="my-12" />
+        <h4 class="text-green1 fw-bold | mb-6">
+          聯絡我們
+        </h4>
+      </div>
+      <div class="col-12 col-md-5 offset-md-1 | mb-6">
+        <p class="text-start text-gray | mb-4">
+          客服信箱： support@healthydiet.com.tw
+        </p>
+        <p class="text-start text-gray | mb-4">
+          客服專線： (02)014-5252
+        </p>
+        <p class="text-start text-gray | mb-4">
+          服務時間： 24 小時 （週日、端午節、中秋節、農曆春節公休）
+        </p>
+        <p class="text-start text-gray">
+          聯絡住址： 台北市文山區好食路 1 號
+        </p>
+      </div>
+      <div class="col-12 col-md-5">
+        <!-- eslint-disable-next-line vuejs-accessibility/iframe-has-title -->
+        <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14465.72068579559!2d121.56271265038104!3d24.98549486713357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aa7093bfbab5%3A0xeec566dce1d529c!2z5paH5bGx5Y2A5YGl5bq35pyN5YuZ5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1651409840643!5m2!1szh-TW!2stw"
+        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </section>
