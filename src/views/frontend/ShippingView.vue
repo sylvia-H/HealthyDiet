@@ -153,7 +153,7 @@
                 </p>
                 <p class="mt-4">
                   商品如有缺失或宅配運送過程有毀損欲辦理退貨：
-                  <ul class="mx-8">
+                  <ul class="list-style3 mx-8">
                     <li>請於收到24小時內來電或來信</li>
                     <li>拍照註明瑕疵或毀損情況</li>
                     <li>把照片寄至客服信箱</li>
@@ -190,7 +190,7 @@
               data-bs-parent="#accordionReturn"
             >
               <div class="accordion-body">
-                <ul class="mx-8">
+                <ul class="list-style3 mx-8">
                   <li>運送過程當中造成商品毀損</li>
                   <li>商品品項數量與訂購單不符合</li>
                   <li>商品本身品質不良</li>
@@ -218,7 +218,7 @@
               data-bs-parent="#accordionReturn"
             >
               <div class="accordion-body">
-                <ul class="mx-8">
+                <ul class="list-style3 mx-8">
                   <li>無出貨明細表與發票</li>
                   <li>商品開封、包裝破損不完整等</li>
                   <li>個人口感或料理方式的問題。</li>
@@ -299,11 +299,13 @@
   color: #83b875 !important;
   border: 5px solid #83b875 !important;
 }
-ul {
+ul.list-style1 {
+  list-style-type: disc;
+}
+ul.list-style2 {
+  list-style-type: square;
+}
+ul.list-style3 {
   list-style-type: circle;
 }
-.shippingProcess .col-6 {
-
-}
-
 </style>
