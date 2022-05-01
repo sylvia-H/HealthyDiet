@@ -2,8 +2,6 @@
   <VLoading :active="isLoading" :z-index="1000">
     <VueLoader></VueLoader>
   </VLoading>
-  <!-- NavBar -->
-  <FrontNavbarFixed />
   <!-- 關於健康減重資訊 -->
   <section class="container | py-20">
     <h2 class="text-center">食前好思</h2>
@@ -346,7 +344,7 @@
       </div>
     </div>
     <!-- Swiper 推薦同類別商品 -->
-    <div v-show="is_showMenu" class="ms-8">
+    <div id="recommendMenu" v-show="is_showMenu" class="ms-8">
       <SwiperDailyMenu
         :products="products"
         :collection="collection"
@@ -358,8 +356,7 @@
 
 <script>
 import VueLoader from '@/components/LoadingOverlay2.vue';
-import FrontNavbarFixed from '@/components/FrontNavbarFixed.vue';
-import SwiperDailyMenu from '../../components/SwiperDailyMenu.vue';
+import SwiperDailyMenu from '@/components/frontend/SwiperDailyMenu.vue';
 
 export default {
   data() {
@@ -379,7 +376,6 @@ export default {
   inject: ['emitter'],
   components: {
     VueLoader,
-    FrontNavbarFixed,
     SwiperDailyMenu,
   },
   methods: {
@@ -430,6 +426,13 @@ export default {
       };
       this.emitter.emit('select-menu', info);
       this.is_showMenu = 1;
+      setTimeout(() => {
+        const element = document.getElementById('recommendMenu');
+        const height = document.body.scrollHeight - element.scrollHeight - 160 - 60;
+        window.scrollTo({ left: 0, top: height, behavior: 'smooth' });
+        // window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: 'smooth' });
+      }, 350);
+      // this.$router.push({ name: 'dietInfo', hash: '#recommendMenu' });
     },
     getProducts() {
       this.isLoading = true;

@@ -1,6 +1,4 @@
 <template>
-  <!-- NavBar -->
-  <FrontNavbarFixed />
   <!-- 送貨須知 -->
   <section class="container | py-20" style="min-height: 90vh;">
     <h2 class="text-center">如何好遞</h2>
@@ -65,14 +63,3 @@
     </div>
   </section>
 </template>
-
-<script>
-import FrontNavbarFixed from '@/components/FrontNavbarFixed.vue';
-
-export default {
-  components: {
-    FrontNavbarFixed,
-  },
-  inject: ['emitter'],
-};
-</script>

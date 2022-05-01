@@ -2,8 +2,6 @@
   <VLoading :active="isLoading" :z-index="1000">
     <VueLoader></VueLoader>
   </VLoading>
-  <!-- NavBar -->
-  <FrontNavbarFixed />
   <section class="container | py-20" style="min-height: 90vh">
     <h2 class="text-center">我的收藏</h2>
     <hr class="my-8" />
@@ -250,7 +248,6 @@
 
 <script>
 import VueLoader from '@/components/LoadingOverlay2.vue';
-import FrontNavbarFixed from '@/components/FrontNavbarFixed.vue';
 
 export default {
   data() {
@@ -262,7 +259,6 @@ export default {
   },
   components: {
     VueLoader,
-    FrontNavbarFixed,
   },
   inject: ['emitter'],
   methods: {

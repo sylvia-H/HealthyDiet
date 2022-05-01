@@ -2,7 +2,7 @@
   <VLoading :active="isLoading" :z-index="1000">
     <VueLoader></VueLoader>
   </VLoading>
-  <div class="container py-18" style="min-height: 90vh;">
+  <div class="container py-20" style="min-height: 90vh;">
     <div class="row mb-6">
       <div class="col-12 col-lg-7">
         <div class="row g-0 | timeline">
@@ -151,7 +151,7 @@
 
 <script>
 import VueLoader from '@/components/LoadingOverlay2.vue';
-import ModalDelCartPayment from '@/components/ModalDelCartPayment.vue';
+import ModalDelCartPayment from '@/components/frontend/ModalDelCartPayment.vue';
 
 export default {
   components: {

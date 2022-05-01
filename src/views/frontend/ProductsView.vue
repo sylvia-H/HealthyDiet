@@ -2,10 +2,8 @@
   <VLoading :active="isLoading" :z-index="1000">
     <VueLoader></VueLoader>
   </VLoading>
-  <!-- NavBar -->
-  <FrontNavbarFixed />
   <!-- 產品列表 -->
-  <section class="container my-16 my-lg-20">
+  <section class="container py-20">
     <h2 class="text-center">來選好食</h2>
     <hr class="mt-8 mb-10" />
     <div class="row">
@@ -111,7 +109,6 @@
 
 <script>
 import VueLoader from '@/components/LoadingOverlay2.vue';
-import FrontNavbarFixed from '@/components/FrontNavbarFixed.vue';
 
 export default {
   data() {
@@ -130,7 +127,6 @@ export default {
   inject: ['emitter'],
   components: {
     VueLoader,
-    FrontNavbarFixed,
   },
   methods: {
     getProducts() {
@@ -232,7 +228,6 @@ export default {
     this.getProducts();
     this.getCart();
     this.getCollection();
-    this.emitter.emit('nav-fix');
   },
 };
 </script>

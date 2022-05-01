@@ -1,24 +1,23 @@
 <template>
   <!-- 前台導覽列 -->
   <nav
-    :class="{ 'fixed-top': is_navFixTop }"
-    class="navbar navbar-expand-lg navbar-light bg-cream3 shadow-sm py-2 py-md-4 py-lg-2"
+    class="navbar navbar-expand-lg navbar-light bg-cream3 shadow-sm fixed-top py-2 py-md-4 py-lg-2"
   >
     <div class="container">
       <RouterLink to="/" class="text-center me-10">
         <!-- <h1 class="text-green1 fz-7 fz-md-9"><strong>好食遞</strong></h1> -->
-        <img style="max-width: 36px" src="../assets/logo.png" alt="好食遞" /><br />
+        <img style="max-width: 36px" src="../../assets/logo.png" alt="好食遞" /><br />
         <span class="text-gray fz-3">HEALTHY DIET</span>
       </RouterLink>
-      <RouterLink to="/products" class="d-none d-lg-flex text-dark me-8 | hvr-float-shadow">
+      <RouterLink to="/products" class="d-none d-lg-flex text-dark me-8 hvr-float-shadow">
         <span class="material-icons me-2"> restaurant_menu </span>
         <h5>來選好食</h5>
       </RouterLink>
-      <RouterLink to="/dietInfo" class="d-none d-lg-flex text-dark me-8 | hvr-float-shadow">
+      <RouterLink to="/dietInfo" class="d-none d-lg-flex text-dark me-8 hvr-float-shadow">
         <span class="material-icons me-2">emoji_objects</span>
         <h5>食前好思</h5>
       </RouterLink>
-      <RouterLink to="/aboutShipping" class="d-none d-lg-flex text-dark me-8 | hvr-float-shadow">
+      <RouterLink to="/aboutShipping" class="d-none d-lg-flex text-dark me-8 hvr-float-shadow">
         <span class="material-icons me-2"> local_shipping </span>
         <h5>如何好遞</h5>
       </RouterLink>
@@ -76,7 +75,7 @@
               <span
                 v-if="fav"
                 class="position-absolute top-25 start-100 translate-middle
-                 badge rounded-pill bg-brown1 fz-3 opacity-75 | d-none d-lg-block"
+                badge rounded-pill bg-brown1 fz-3 opacity-75 | d-none d-lg-block"
               >
                 {{ fav }}
                 <span class="visually-hidden">unread messages</span>
@@ -102,7 +101,7 @@
             <span
               v-if="cartsTotal"
               class="position-absolute top-25 start-100 translate-middle
-               badge rounded-pill bg-brown1 fz-3 opacity-75 | d-none d-lg-block"
+              badge rounded-pill bg-brown1 fz-3 opacity-75 | d-none d-lg-block"
             >
               {{ cartsTotal }}
               <span class="visually-hidden">unread messages</span>
@@ -116,18 +115,17 @@
 </template>
 
 <script>
-import CanvasCart from '@/components/CanvasCart.vue';
+import CanvasCart from '@/components/frontend/CanvasCart.vue';
 import Collapse from 'bootstrap/js/dist/collapse';
 
 export default {
-  name: 'FrontNavbar',
+  name: 'FrontNavbarFixed',
   data() {
     return {
       carts: [],
       cartsTotal: 0,
       fav: 0,
       navMenu: '',
-      is_navFixTop: false,
     };
   },
   components: {
@@ -182,16 +180,11 @@ export default {
     this.emitter.on('get-fav', () => {
       this.getFav();
     });
-    this.emitter.on('nav-fix', () => {
-      this.is_navFixTop = true;
-    });
-    this.emitter.on('nav-unfix', () => {
-      this.is_navFixTop = false;
-    });
     // 解決手機版 Menu 無法自動收合問題
     this.navMenu = new Collapse(this.$refs.navMenu, {
       toggle: false,
     });
+    console.log(this.$route.path);
   },
 };
 </script>

@@ -137,7 +137,7 @@
 
 <script>
 import { Offcanvas } from 'bootstrap';
-import ModalDelCart from '@/components/ModalDelCart.vue';
+import ModalDelCart from '@/components/frontend/ModalDelCart.vue';
 
 export default {
   name: 'CanvasCart',

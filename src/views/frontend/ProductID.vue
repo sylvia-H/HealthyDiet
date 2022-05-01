@@ -2,10 +2,8 @@
   <VLoading :active="isLoading" :z-index="1000">
     <VueLoader></VueLoader>
   </VLoading>
-  <!-- NavBar -->
-  <FrontNavbarFixed />
   <!-- 產品列表 -->
-  <section class="container | py-20">
+  <section class="container | py-10">
     <div class="row">
       <div class="d-flex mx-8 mb-10">
         <RouterLink to="../" class="text-gray"> 首頁 </RouterLink>
@@ -209,12 +207,12 @@
 
 <script>
 import VueLoader from '@/components/LoadingOverlay2.vue';
-import FrontNavbarFixed from '@/components/FrontNavbarFixed.vue';
-import SwiperRecommend from '../../components/SwiperRecommend.vue';
+import SwiperRecommend from '@/components/frontend/SwiperRecommend.vue';
 
 export default {
   data() {
     return {
+      is_navFixTop: true,
       product: {
         origin_price: '',
         price: '',
@@ -229,7 +227,6 @@ export default {
   },
   components: {
     VueLoader,
-    FrontNavbarFixed,
     SwiperRecommend,
   },
   inject: ['emitter'],

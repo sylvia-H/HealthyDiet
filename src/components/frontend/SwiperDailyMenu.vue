@@ -32,7 +32,7 @@
           class="badgeFav position-absolute translate-middle-y top-3 end-0 fz-8"
         >
           <i v-if="collection[item.id]" class="bi bi-bookmark-heart-fill text-danger"></i>
-          <i v-else class="bi bi-bookmark-heart-fill text-gray2"></i>
+          <i v-else class="bi bi-bookmark-heart-fill text-light4"></i>
         </div>
         <div class="row g-0">
           <div class="col-lg-5 d-flex flex-column justify-content-between">
@@ -230,9 +230,16 @@ export default {
   cursor: pointer;
 }
 
+.badgeFav .text-light4:hover {
+  color: #666 !important;
+}
+
 @media only screen and (max-width: 991px) {
   .card-img{
     height: 180px;
+  }
+  .card .badgeFav {
+    top: 2% !important;
   }
 }
 

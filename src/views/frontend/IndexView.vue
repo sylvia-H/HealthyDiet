@@ -202,9 +202,9 @@
 </template>
 
 <script>
-import FrontNavbar from '@/components/FrontNavbar.vue';
+import FrontNavbar from '@/components/frontend/FrontNavbar.vue';
+import TextFrame from '@/components/frontend/FrontTextFrame.vue';
 import VueLoader from '@/components/LoadingOverlay2.vue';
-import TextFrame from '@/components/FrontTextFrame.vue';
 
 export default {
   components: {
