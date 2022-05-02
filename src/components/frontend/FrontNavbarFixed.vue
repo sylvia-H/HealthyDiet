@@ -9,21 +9,21 @@
         <img style="max-width: 36px" src="../../assets/logo.png" alt="好食遞" /><br />
         <span class="text-gray fz-3">HEALTHY DIET</span>
       </RouterLink>
-      <ul class="d-flex">
-        <li class="nav-item">
-          <RouterLink to="/products" class="d-none d-lg-flex text-dark me-8 hvr-float-shadow">
+      <ul class="d-flex align-items-center">
+        <li class="nav-item me-8">
+          <RouterLink to="/products" class="d-none d-lg-flex text-dark | hvr-float-shadow">
             <span class="material-icons me-2"> restaurant_menu </span>
             <h5>來選好食</h5>
           </RouterLink>
         </li>
-        <li class="nav-item">
-          <RouterLink to="/dietInfo" class="d-none d-lg-flex text-dark me-8 hvr-float-shadow">
+        <li class="nav-item me-8">
+          <RouterLink to="/dietInfo" class="d-none d-lg-flex text-dark | hvr-float-shadow">
             <span class="material-icons me-2">emoji_objects</span>
             <h5>食前好思</h5>
           </RouterLink>
         </li>
-        <li class="nav-item">
-          <RouterLink to="/aboutShipping" class="d-none d-lg-flex text-dark me-8 hvr-float-shadow">
+        <li class="nav-item me-8">
+          <RouterLink to="/aboutShipping" class="d-none d-lg-flex text-dark | hvr-float-shadow">
             <span class="material-icons me-2"> local_shipping </span>
             <h5>如何好遞</h5>
           </RouterLink>
@@ -197,8 +197,11 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 .nav-item {
   cursor: pointer;
+  .active{
+    color: #166907 !important;
+  }
 }
 </style>
