@@ -135,7 +135,7 @@
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#collapse_1"
-                aria-expanded="false"
+                aria-expanded="true"
                 aria-controls="collapse_1"
               >
                 可以退換貨嗎？
