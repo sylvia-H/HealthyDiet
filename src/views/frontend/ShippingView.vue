@@ -131,7 +131,7 @@
           <div class="accordion-item">
             <h2 class="accordion-header" id="heading_1">
               <button
-                class="accordion-button collapsed"
+                class="accordion-button"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#collapse_1"
@@ -143,7 +143,7 @@
             </h2>
             <div
               id="collapse_1"
-              class="accordion-collapse collapse"
+              class="accordion-collapse collapse show"
               aria-labelledby="heading_1"
               data-bs-parent="#accordionReturn"
             >
