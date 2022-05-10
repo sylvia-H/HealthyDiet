@@ -4,6 +4,13 @@ module.exports = {
     : '/',
   chainWebpack: (config) => {
     config.performance.set('hints', false);
+    config
+      .plugin('html')
+      .tap((args) => {
+        const ARGS = args;
+        ARGS[0].title = '好食遞 HEALTHY DIET - 您的優質餐飲管家';
+        return ARGS;
+      });
   },
   pwa: {
     iconPaths: {
